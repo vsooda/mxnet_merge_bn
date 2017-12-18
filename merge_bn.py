@@ -9,7 +9,6 @@ def merge_bn(args, auxs, conv_name, bn_prefix):
     bias = args[conv_name+"_bias"].asnumpy()
     gamma = args[bn_prefix+"_gamma"].asnumpy()
     beta = args[bn_prefix+"_beta"].asnumpy()
-    #todo: beta and basis is the same?
     print conv_weights.shape, bias.shape
 
     mean = auxs[bn_prefix+"_moving_mean"].asnumpy()
